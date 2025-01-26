@@ -70,8 +70,14 @@ Before embarking on this journey, ensure you have completed the following steps:
     }
     ```
 
+!!! warning "```cargo new``` command" 
+    Make sure to include the postCreateCommand as ```cargo new``` must be run on an empty directory. Since we have already created a README and Dev Container folder our directory would not be empty. Thus running this command allows us to initalize a Rust directory and keep our other files.
+
+!!! note "```--vcs none``` flag"
+    This flag is used to create a version control system, however since we already implemented a git repository it is unnecessary, hence ```none```.
+
 4. Reopen the folder in the container
-    * Press ++ctrl+shift+p++ or ++cmd+shift+p++, search for **Reopen in container** and select it.
+    * Press ++ctrl+shift+p++ or ++cmd+shift+p++, search for **Dev Container: Reopen in Container** and select it.
     * Wait for the container to launch
 
 ## Creating the Rust Project
@@ -90,6 +96,12 @@ fn main() {
 }
 ```
 
+!!! note ""
+    Similar to languages such as Java or C, Rust uses a ```main()``` function as the entry point for your program.
+
+!!! note ""
+    The exclamation mark on ```println!``` is used to signify that this is a macro call. Essentially, it is Rust code that will write more Rust code before compilation. It is similar to a function in reducing the amount of code needed to be written. However, it offers more versatility in its definition and implementation in exchange for complexity.
+
 4. Open a new terminal in VSCode and run the following:
 ```sh
 cd ./<Rust Project Name>
@@ -106,7 +118,8 @@ cargo build
 cargo run
 ```
 
-!!! note "Difference between ```cargo build``` and ```cargo run```"
+!!! info "Difference between ```cargo build``` and ```cargo run```"
+    Cargo build compiles and creates an executable file from your main file You can see this file in the ```target/debug``` directory. You can then run this file separately. Cargo run also compiles main and then immediately runs it without creating the executable file.
 
 [^]: Steps regarding git and dev container initialization were taken from the [COMP 423](https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-1-create-a-local-directory-and-initialize-git) site.
 
