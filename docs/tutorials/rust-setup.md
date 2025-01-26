@@ -78,12 +78,12 @@ Before embarking on this journey, ensure you have completed the following steps:
 
 Once the dev container is set up, you’re ready to create and build a Rust project.
 
-1. Confirm that Rust is installed and up to date by running:
+1. Confirm that Rust is installed and up to date by running the following in a new VSCode terminal:
 ```sh
 rustc --version
 ```
 
-3. Navigate into ```./<project-name>/src/main.rs``` and update it to look like:
+3. Navigate into ```./<Rust Project Name>/src/main.rs``` and update it to look like:
 ```rs
 fn main() {
     println!("Hello COMP423");
@@ -92,16 +92,16 @@ fn main() {
 
 4. Open a new terminal in VSCode and run the following:
 ```sh
-cd ./<project-name>
+cd ./<Rust Project Name>
 cargo build
 ```
 
 5. Run the built file directly
 ```sh
-./target/debug/<project-name>
+./target/debug/<Rust Project Name>
 ```
 
-6. Alternatively, from your rust folder, you can run the following in the terminal:
+6. Alternatively, from your rust project folder, you can run the following in the terminal:
 ```sh
 cargo run
 ```
